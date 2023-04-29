@@ -5,6 +5,7 @@ vim.keymap.set("n", "<leader>fb", ":Telescope file_browser hidden=true)<CR>", { 
 vim.keymap.set("n", "<leader>fp", ":Telescope file_browser)<CR>", { noremap = true })
 
 vim.keymap.set("n", "<leader>ee", vim.cmd.NvimTreeToggle)
+
 -- Opens Netrw  = DISABLED BY NvimTree plugin
 --vim.keymap.set("n", "<leader>ee", vim.cmd.Ex)
 

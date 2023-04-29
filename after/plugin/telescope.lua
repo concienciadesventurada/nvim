@@ -9,3 +9,5 @@ vim.keymap.set('n', '<leader>ps', function()
 end)
 -- Search in help
 vim.keymap.set('n', '<leader>vh', builtin.help_tags, {})
+-- todo-comments grep
+vim.keymap.set('n', '<leader>td', "<cmd>TodoTelescope<cr>")

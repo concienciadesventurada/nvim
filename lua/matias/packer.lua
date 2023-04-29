@@ -86,7 +86,7 @@ return require('packer').startup(function(use)
   use ('norcalli/nvim-colorizer.lua')
 
   -- File browser
-  use { "nvim-telescope/telescope-file-browser.nvim" }
+  --use { "nvim-telescope/telescope-file-browser.nvim" }
 
   -- Line indent for functions/statements
   use { "lukas-reineke/indent-blankline.nvim" }
@@ -96,6 +96,9 @@ return require('packer').startup(function(use)
 
   -- Icons!
   use { 'nvim-tree/nvim-web-devicons' }
+
+  -- TODO Comments
+  use { "folke/todo-comments.nvim" }
 
   if packer_bootstrap then
     require('packer').sync()
