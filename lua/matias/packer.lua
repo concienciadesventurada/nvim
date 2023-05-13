@@ -39,7 +39,7 @@ return require('packer').startup(function(use)
   use { "catppuccin/nvim", as = "catppuccin" }
 
   -- Persistant marks to different projects
-  use ('theprimeagen/harpoon')
+  --use ('theprimeagen/harpoon')
 
   -- Keeps records of all changes
   use ('mbbill/undotree')
