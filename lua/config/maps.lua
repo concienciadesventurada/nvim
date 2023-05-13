@@ -1,5 +1,4 @@
--- ################## LEADER AND NAVIGATION ################## 
-vim.g.mapleader = " "
+-- ################## NAVIGATION ################## 
 
 vim.keymap.set("n", "<leader>fb", ":Telescope file_browser hidden=true)<CR>", { noremap = true })
 vim.keymap.set("n", "<leader>fp", ":Telescope file_browser)<CR>", { noremap = true })

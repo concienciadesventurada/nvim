@@ -11,3 +11,7 @@ end)
 vim.keymap.set('n', '<leader>vh', builtin.help_tags, {})
 -- todo-comments grep
 vim.keymap.set('n', '<leader>td', "<cmd>TodoTelescope<cr>")
+
+return {
+  'nvim-telescope/telescope.nvim'
+}
