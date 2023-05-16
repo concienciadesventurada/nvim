@@ -73,10 +73,7 @@ vim.keymap.set('n', '<leader><down>', '<C-w>-')
 
 -- ################## VIM CONFIGS ################## 
 
--- Opens packer.lua
-vim.keymap.set("n", "<leader>vpp", "<cmd>e ~/.config/nvim/lua/matias/packer.lua<CR>");
-
--- Opens packer.lua
+-- Opens set.lua
 vim.keymap.set("n", "<leader>vps", "<cmd>e ~/.config/nvim/lua/matias/set.lua<CR>");
 
 -- Opens maps.lua
