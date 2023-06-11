@@ -32,6 +32,9 @@ return require('packer').startup(function(use)
       ts_update()
     end,
   }
+
+  use { 'nvim-treesitter/nvim-treesitter-context'}
+
   -- VSCode theme 'cause its the most intuitive colorscheme
   use ('Mofiqul/vscode.nvim')
 
@@ -99,6 +102,18 @@ return require('packer').startup(function(use)
 
   -- TODO Comments
   use { "folke/todo-comments.nvim" }
+
+  -- Git signs in every file
+  use { 'lewis6991/gitsigns.nvim' }
+
+  -- Prettier
+  use { 'MunifTanjim/prettier.nvim' }
+
+  -- Null.ls
+  use { 'jose-elias-alvarez/null-ls.nvim' }
+
+  -- Discord
+  use { 'andweeb/presence.nvim' }
 
   if packer_bootstrap then
     require('packer').sync()

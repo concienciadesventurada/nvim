@@ -9,10 +9,12 @@ vim.keymap.set("n", "<leader>ee", vim.cmd.NvimTreeToggle)
 -- Opens Netrw  = DISABLED BY NvimTree plugin
 --vim.keymap.set("n", "<leader>ee", vim.cmd.Ex)
 
--- ################## LSP ################## 
+-- ################## LSP/FORMATTING ################## 
 -- Toggles inline errors on/off
 vim.keymap.set("n", "<leader>tt", ":lua vim.diagnostic.config({ virtual_text = false })<CR>", { noremap = true })
 vim.keymap.set("n", "<leader>tr", ":lua vim.diagnostic.config({ virtual_text = true })<CR>", { noremap = true })
+
+vim.keymap.set("n", "<leader><leader>", ":Prettier<CR>")
 
 -- ################## TEXT EDITING ################## 
 
@@ -82,12 +84,6 @@ vim.keymap.set("n", "<leader>vps", "<cmd>e ~/.config/nvim/lua/matias/set.lua<CR>
 
 -- Opens maps.lua
 vim.keymap.set("n", "<leader>vpm", "<cmd>e ~/.config/nvim/lua/matias/maps.lua<CR>");
-
--- Sources current file
-vim.keymap.set("n", "<leader><leader>", function()
-    vim.cmd("so")
-end)
-
 
 -- ################## MISC ################## 
 
