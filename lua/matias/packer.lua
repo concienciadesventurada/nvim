@@ -73,6 +73,14 @@ return require('packer').startup(function(use)
     }
   }
 
+  use {
+    'akinsho/flutter-tools.nvim',
+    requires = {
+        'nvim-lua/plenary.nvim',
+        'stevearc/dressing.nvim', -- optional for vim.ui.select
+    },
+  }
+
   -- Line formatted with VSCode with icons
   use { 'nvim-lualine/lualine.nvim' }
 
