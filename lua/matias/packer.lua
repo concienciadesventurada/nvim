@@ -73,6 +73,7 @@ return require('packer').startup(function(use)
     }
   }
 
+  -- Flutter
   use {
     'akinsho/flutter-tools.nvim',
     requires = {
@@ -80,6 +81,8 @@ return require('packer').startup(function(use)
         'stevearc/dressing.nvim', -- optional for vim.ui.select
     },
   }
+
+  use 'mfussenegger/nvim-dap'
 
   -- Line formatted with VSCode with icons
   use { 'nvim-lualine/lualine.nvim' }

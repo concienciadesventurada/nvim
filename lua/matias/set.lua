@@ -39,11 +39,11 @@ vim.opt.isfname:append("@-@")
 
 vim.opt.updatetime = 50
 
---vim.opt.colorcolumn = "80"
+vim.opt.colorcolumn = "80"
 
 vim.g.mapleader = " "
 
--- Its supposed to ignore node_modules on webdev but i don't see it working 
+-- Its supposed to ignore node_modules on webdev but i don't see it working
 vim.opt.wildignore:append { '*/node_modules/*' }
 
 vim.breakindent = true
