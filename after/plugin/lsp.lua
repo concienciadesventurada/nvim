@@ -7,6 +7,7 @@ lsp.ensure_installed({
     'tsserver',
     'eslint',
     'lua_ls',
+    'omnisharp'
 })
 
 local cmp = require('cmp')
@@ -42,6 +43,32 @@ lsp.nvim_workspace()
 -- Don't know if it belongs here, but makes renders errors/hints inline
 vim.diagnostic.config({
   virtual_text = true
+})
+
+-- Setup OmniSharp for C# language
+local pid = vim.fn.getpid()
+-- local omnisharp_bin = "/usr/local/bin/omnisharp-roslyn/OmniSharp"
+
+require('lspconfig').omnisharp.setup({
+   cmd = {
+    "dotnet",
+    "/usr/local/bin/omnisharp-roslyn/OmniSharp",
+    "--hostPID",
+    tostring(pid),
+    "DotNet:enablePackageRestore=true",
+    "--encoding",
+    "utf-8",
+    "--languageserver",
+    "FormattingOptions:EnableEditorConfigSupport=true",
+    "Sdk:IncludePrereleases=true",
+  },
+  enable_editorconfig_support = true,
+  enable_ms_build_load_projects_on_demand = false,
+  enable_roslyn_analyzers = false,
+  organize_imports_on_format = false,
+  enable_import_completion = false,
+  sdk_include_prereleases = true,
+  analyze_open_documents_only = false,
 })
 
 lsp.setup()
