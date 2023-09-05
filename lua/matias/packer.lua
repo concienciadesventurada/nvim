@@ -96,7 +96,13 @@ return require('packer').startup(function(use)
     config = function() require("nvim-autopairs").setup {} end
   }
 
-  use 'f-person/git-blame.nvim'
+  use {
+    'f-person/git-blame.nvim',
+    config = function() require("gitblame").setup {
+      enabled = false,
+    }
+    end
+  }
 
   -- Highlights #hex color code
   use ('norcalli/nvim-colorizer.lua')
