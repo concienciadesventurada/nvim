@@ -26,4 +26,4 @@ vim.opt.undofile = true
 vim.opt.hlsearch = false
 vim.opt.incsearch = true -- For tricky searches: /vim.* = | allows wildcards
 
-vim.opt.wildignore:append { '*/node_modules/*' }
+vim.opt.wildignore:append({ "*/node_modules/*" })

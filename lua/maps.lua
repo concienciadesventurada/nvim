@@ -36,33 +36,32 @@ vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 -- ################## PANE MOVEMENT ##################
 
 -- Split tab horizontal, switches to it automatically
-vim.keymap.set("n", "<leader>-", '<cmd>split<Return><C-w>w<CR>')
+vim.keymap.set("n", "<leader>-", "<cmd>split<Return><C-w>w<CR>")
 -- Split tab vertical, switches to it automatically
-vim.keymap.set('n', '<leader>_', '<cmd>vsplit<Return><C-w>w<CR>')
+vim.keymap.set("n", "<leader>_", "<cmd>vsplit<Return><C-w>w<CR>")
 
 -- Move window
-vim.keymap.set('n', 'sh', '<C-w>h')
-vim.keymap.set('n', 'sk', '<C-w>k')
-vim.keymap.set('n', 'sj', '<C-w>j')
-vim.keymap.set('n', 'sl', '<C-w>l')
+vim.keymap.set("n", "sh", "<C-w>h")
+vim.keymap.set("n", "sk", "<C-w>k")
+vim.keymap.set("n", "sj", "<C-w>j")
+vim.keymap.set("n", "sl", "<C-w>l")
 
 -- Resize window
-vim.keymap.set('n', '<leader><left>', '<C-w><')
-vim.keymap.set('n', '<leader><right>', '<C-w>>')
-vim.keymap.set('n', '<leader><up>', '<C-w>+')
-vim.keymap.set('n', '<leader><down>', '<C-w>-')
-
+vim.keymap.set("n", "<leader><left>", "<C-w><")
+vim.keymap.set("n", "<leader><right>", "<C-w>>")
+vim.keymap.set("n", "<leader><up>", "<C-w>+")
+vim.keymap.set("n", "<leader><down>", "<C-w>-")
 
 -- ################## VIM CONFIGS ##################
 
 -- Opens plugins dir
-vim.keymap.set("n", "<leader>vpp", "<cmd>e $HOME/.config/nvim/plugins/<CR>");
+vim.keymap.set("n", "<leader>vpp", "<cmd>e $HOME/.config/nvim/plugins/<CR>")
 
 -- Opens sets.lua
-vim.keymap.set("n", "<leader>vps", "<cmd>e $HOME/.config/nvim/lua/sets.lua<CR>");
+vim.keymap.set("n", "<leader>vps", "<cmd>e $HOME/.config/nvim/lua/sets.lua<CR>")
 
 -- Opens maps.lua
-vim.keymap.set("n", "<leader>vpm", "<cmd>e $HOME/.config/nvim/lua/maps.lua<CR>");
+vim.keymap.set("n", "<leader>vpm", "<cmd>e $HOME/.config/nvim/lua/maps.lua<CR>")
 
 -- ################## MISC ##################
 
@@ -84,4 +83,3 @@ vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 -- Haven't linked with tmux yet due to ohmytmux! use, but it creates tmux
 -- sessions with determined panes and programs
 --vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
-
