@@ -1,23 +1,3 @@
--- ################## LEADER AND NAVIGATION ##################
-vim.g.mapleader = " "
-
-vim.keymap.set("n", "<leader>fb", ":Telescope file_browser hidden=true)<CR>", { noremap = true })
-vim.keymap.set("n", "<leader>fp", ":Telescope file_browser)<CR>", { noremap = true })
-
-vim.keymap.set("n", "<leader>ee", vim.cmd.NvimTreeToggle)
-
--- Opens Netrw  = DISABLED BY NvimTree plugin
---vim.keymap.set("n", "<leader>ee", vim.cmd.Ex)
-
--- ################## LSP/FORMATTING ##################
--- Toggles inline errors on/off
-vim.keymap.set("n", "<leader>tt", ":lua vim.diagnostic.config({ virtual_text = false })<CR>", { noremap = true })
-vim.keymap.set("n", "<leader>tr", ":lua vim.diagnostic.config({ virtual_text = true })<CR>", { noremap = true })
-
-vim.keymap.set("n", "<leader><leader>", ":Prettier<CR>")
-
--- ################## TEXT EDITING ##################
-
 -- Moves a block of code respecting indentation
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
@@ -53,44 +33,40 @@ vim.keymap.set("n", "N", "Nzzzv")
 -- Makes executable
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
-
 -- ################## PANE MOVEMENT ##################
 
 -- Split tab horizontal, switches to it automatically
-vim.keymap.set("n", "<leader>-", '<cmd>split<Return><C-w>w<CR>')
+vim.keymap.set("n", "<leader>-", "<cmd>split<Return><C-w>w<CR>")
 -- Split tab vertical, switches to it automatically
-vim.keymap.set('n', '<leader>_', '<cmd>vsplit<Return><C-w>w<CR>')
+vim.keymap.set("n", "<leader>_", "<cmd>vsplit<Return><C-w>w<CR>")
 
 -- Move window
-vim.keymap.set('n', 'sh', '<C-w>h')
-vim.keymap.set('n', 'sk', '<C-w>k')
-vim.keymap.set('n', 'sj', '<C-w>j')
-vim.keymap.set('n', 'sl', '<C-w>l')
+vim.keymap.set("n", "sh", "<C-w>h")
+vim.keymap.set("n", "sk", "<C-w>k")
+vim.keymap.set("n", "sj", "<C-w>j")
+vim.keymap.set("n", "sl", "<C-w>l")
 
 -- Resize window
-vim.keymap.set('n', '<leader><left>', '<C-w><')
-vim.keymap.set('n', '<leader><right>', '<C-w>>')
-vim.keymap.set('n', '<leader><up>', '<C-w>+')
-vim.keymap.set('n', '<leader><down>', '<C-w>-')
-
+vim.keymap.set("n", "<leader><left>", "<C-w><")
+vim.keymap.set("n", "<leader><right>", "<C-w>>")
+vim.keymap.set("n", "<leader><up>", "<C-w>+")
+vim.keymap.set("n", "<leader><down>", "<C-w>-")
 
 -- ################## VIM CONFIGS ##################
 
--- Opens packer.lua
-vim.keymap.set("n", "<leader>vpp", "<cmd>e ~/.config/nvim/lua/matias/packer.lua<CR>");
+-- Opens plugins dir
+vim.keymap.set("n", "<leader>vpp", "<cmd>e $HOME/.config/nvim/plugins/<CR>")
 
--- Opens packer.lua
-vim.keymap.set("n", "<leader>vps", "<cmd>e ~/.config/nvim/lua/matias/set.lua<CR>");
+-- Opens sets.lua
+vim.keymap.set("n", "<leader>vps", "<cmd>e $HOME/.config/nvim/lua/sets.lua<CR>")
 
 -- Opens maps.lua
-vim.keymap.set("n", "<leader>vpm", "<cmd>e ~/.config/nvim/lua/matias/maps.lua<CR>");
+vim.keymap.set("n", "<leader>vpm", "<cmd>e $HOME/.config/nvim/lua/maps.lua<CR>")
 
 -- ################## MISC ##################
 
 -- No idea what the do (yet)
 vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
-
-vim.keymap.set("n", "<leader>b", "<cmd>GitBlameToggle<CR>")
 
 -- The idea is to save the error messages from the compiler in a file and use
 -- Vim to jump to the errors one by one.  You can examine each problem and
