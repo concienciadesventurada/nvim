@@ -1,13 +1,7 @@
+-- Displays HEX and RGB codes' color
 return {
-  "norcalli/nvim-colorizer.lua",
-  config = function()
-    require 'colorizer'.setup {
-      'css';
-      'javascript';
-      html = {
-        mode = 'foreground';
-      }
-    }
-  end
+    "norcalli/nvim-colorizer.lua",
+    config = function()
+        require("colorizer").setup()
+    end
 }
-
