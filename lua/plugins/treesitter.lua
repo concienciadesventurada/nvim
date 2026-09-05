@@ -1,34 +1,19 @@
-return {
-	{
-		"nvim-treesitter/nvim-treesitter",
-		build = ":TSUpdate",
-		config = function()
-			local config = require("nvim-treesitter.configs")
+vim.pack.add({
+    {
+        src = "https://github.com/nvim-treesitter/nvim-treesitter",
+        branch = "main",
+        build = ":TSUpdate"
+    }
+})
 
-			config.setup({
-				ensure_installed = {
-					"lua",
-					"javascript",
-					"c",
-					"svelte",
-					"bash",
-					"css",
-					"html",
-					"typescript",
-					"markdown",
-					"json",
-				},
-				highlight = { enable = true },
-				indent = { enable = true },
-			})
-		end,
-	},
-	{
-		"nvim-treesitter/nvim-treesitter-context",
-		opts = {
-			enable = true,
-			line_numbers = true,
-			max_lines = 10,
-		},
-	},
+require("nvim-treesitter").setup {
+    -- Directory to install parsers and queries to (prepended to `runtimepath` to have priority)
+    install_dir = vim.fn.stdpath('data') .. '/site'
+}
+
+require("nvim-treesitter").install {
+    "lua",
+    "bash",
+    "markdown",
+    "json"
 }

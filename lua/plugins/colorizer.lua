@@ -1,7 +1,4 @@
 -- Displays HEX and RGB codes' color
-return {
-	"norcalli/nvim-colorizer.lua",
-	config = function()
-		require("colorizer").setup()
-	end,
-}
+vim.pack.add({"https://github.com/norcalli/nvim-colorizer.lua"})
+
+require("colorizer").setup()
