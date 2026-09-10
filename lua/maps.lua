@@ -46,6 +46,10 @@ vim.keymap.set("n", "N", "Nzzzv")
 vim.keymap.set("n", "]s", "]szzzv")
 vim.keymap.set("n", "[s", "[szzzv")
 
+-- WARNING: probando la wea y ademas no seee nosee como no see
+
+-- ERROR: probando la wea y ademas no seee nosee como no see
+
 -- Get file absolute path and copy to clipboard
 vim.keymap.set("n", "<leader>fp", function()
   local path = vim.fn.expand("%:p")
@@ -96,14 +100,12 @@ vim.keymap.set("n", "<leader><down>", "<C-w>-")
 vim.keymap.set("n", "<leader>vpp", "<cmd>e $HOME/.config/nvim/plugins/<CR>")
 
 -- Opens sets.lua
-vim.keymap.set("n", "<leader>vps", "<cmd>e $HOME/.config/nvim/lua/sets.lua<CR>")
+vim.keymap.set("n", "<leader>vps", "<cmd>e $HOME/.config/nvim/lua/opts.lua<CR>")
 
 -- Opens maps.lua
 vim.keymap.set("n", "<leader>vpm", "<cmd>e $HOME/.config/nvim/lua/maps.lua<CR>")
 
--- ################## MISC ##################
-
--- No idea what the do (yet)
+-- lint
 vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
 
 -- The idea is to save the error messages from the compiler in a file and use
