@@ -11,18 +11,18 @@ vim.pack.add({
 })
 
 require("neo-tree").setup({
-    window = {
-        width = 35,
+  window = {
+    width = 35,
+  },
+  hijack_netrw_behavior = "open_default",
+  event_handlers = {
+    {
+      event = "file_opened",
+      handler = function()
+        require("neo-tree.command").execute({ action = "close" })
+      end,
     },
-    hijack_netrw_behavior = "open_default",
-    event_handlers = {
-        {
-            event = "file_opened",
-            handler = function()
-                require("neo-tree.command").execute({ action = "close" })
-            end,
-        },
-    },
+  },
 })
 
 vim.keymap.set("n", "<leader>e", ":Neotree toggle filesystem reveal<CR>", {})

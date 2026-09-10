@@ -11,7 +11,7 @@ return {
                     alt = { "FIXME", "BUG", "FIXIT", "ISSUE" },
                 },
                 TODO = { icon = " ", color = "info" },
-                DPND = { icon = " ", color = "warning" },
+                DPND = { icon = " ", color = "warning" },
                 HACK = { icon = " ", color = "warning" },
                 WARN = { icon = " ", color = "warning", alt = { "WARNING", "XXX" } },
                 PERF = { icon = " ", alt = { "OPTIM", "PERFORMANCE", "OPTIMIZE" } },

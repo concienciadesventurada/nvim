@@ -1,5 +1,9 @@
 vim.g.mapleader = " "
 
+vim.opt.cmdheight = 0
+
+vim.cmd.colorscheme = "habamax"
+
 vim.opt.nu = true
 vim.opt.relativenumber = true
 
@@ -22,11 +26,11 @@ vim.opt.autoindent = true
 vim.breakindent = true
 -- vim.opt.textwidth = 80
 
-vim.opt.completeopt = "menuone,noinsert,noselect"
+vim.opt.completeopt = "menuone,noinsert,fuzzy,nosort,noselect"
 
-vim.opt.tabstop = 4
-vim.opt.softtabstop = 4
-vim.opt.shiftwidth = 4
+vim.opt.tabstop = 2
+vim.opt.softtabstop = 2
+vim.opt.shiftwidth = 2
 
 vim.opt.wildmenu = true
 vim.opt.conceallevel = 2 -- obsidian requirement
@@ -62,3 +66,6 @@ vim.opt.wildmode = "longest:full,full" -- complete longest common match, full co
 vim.opt.diffopt:append("linematch:60") -- improve diff display
 vim.opt.redrawtime = 10000 -- increase neovim redraw tolerance
 vim.opt.maxmempattern = 20000 -- increase max memory
+
+vim.opt.spelllang = { "es_es", "en_us" }
+vim.opt.spell = true
