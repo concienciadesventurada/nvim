@@ -57,6 +57,7 @@ vim.keymap.set("n", "<leader>fp", function()
   print("file:", path)
 end, { desc = "Copy absolute file path" })
 
+-- TODO: esto deberia ser un snippet o alguna wea
 vim.keymap.set("n", "<leader>sb", function()
   local lines = {
     "#### ",
