@@ -10,7 +10,8 @@ local keywords = {
   WARNING = { icon = "", color = "warning" },
   EN_PROCESO = { icon = "", color = "default", alt = { "ONGOING" } },
   PROCESO = { icon = "", color = "proceso", alt = { "PROCESO" } },
-  PENDIENTE = { icon = " ", color = "error" },
+  POSTERGADO = { icon = " ", color = "warning" },
+  PENDIENTE = { icon = " ", color = "error", alt = { "DEPENDE" } },
   ERROR = { icon = " ", color = "error", alt = { "WARNING", "FALLIDO", "MISSING" } },
   REQUISITO = { icon = " ", color = "info", alt = { "TRAMITE", "TRAMITOLOGIA" } },
 }
@@ -34,6 +35,9 @@ end, { desc = "Previous todo comment" })
 vim.keymap.set("n", "<leader>tc", "<cmd>TodoTelescope<cr>", { desc = "Todo... completo" })
 
 vim.keymap.set("n", "<leader>tl", "<cmd>TodoTelescope keywords=DONE<cr>", { desc = "Todo listo o dones" })
+
+vim.keymap.set("n", "<leader>tp", "<cmd>TodoTelescope keywords=ONGOING,EN_PROCESO,PROCESO,PENDIENTE<cr>",
+  { desc = "Todo procesos" })
 
 vim.keymap.set("n", "<leader>td", "<cmd>TodoTelescope keywords=TODO<cr>", { desc = "Todos" })
 
